@@ -50,6 +50,204 @@ Develop SQL-based analytics to deliver detailed insights into:
 
 These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
 
+## 📊 Analytics & Reporting Layer
+
+The Gold Layer provides business-ready reporting models that transform raw transactional data into actionable insights. These analytical datasets are optimized for reporting, dashboarding, KPI tracking, and decision-making.
+
+---
+
+## Reporting Data Mart
+
+| Report                            | Description                                                  | Business Area        |
+| --------------------------------- | ------------------------------------------------------------ | -------------------- |
+| `gold.report_customers`           | Customer behavior, segmentation, and lifetime value analysis | Customer Analytics   |
+| `gold.report_products`            | Product performance and revenue contribution analysis        | Product Analytics    |
+| `gold.report_sales`               | Sales trends and revenue performance monitoring              | Sales Analytics      |
+| `gold.report_customer_segments`   | Customer segmentation and purchasing patterns                | Marketing Analytics  |
+| `gold.report_product_categories`  | Category-level performance and profitability                 | Product Analytics    |
+| `gold.report_geography`           | Regional sales and customer distribution analysis            | Geographic Analytics |
+| `gold.report_monthly_performance` | Monthly business KPIs and growth metrics                     | Executive Reporting  |
+| `gold.report_retention`           | Customer retention and repeat purchase analysis              | Customer Success     |
+| `gold.report_top_products`        | Top-selling and highest-revenue products                     | Product Management   |
+| `gold.report_top_customers`       | Highest-value customer analysis                              | Customer Management  |
+
+---
+
+## 👥 Customer Report (`gold.report_customers`)
+
+### Purpose
+
+Provides a consolidated view of customer demographics, purchasing behavior, and lifetime value metrics.
+
+### Metrics
+
+| Metric                | Description                 |
+| --------------------- | --------------------------- |
+| Total Orders          | Number of orders placed     |
+| Total Sales           | Total revenue generated     |
+| Total Quantity        | Total units purchased       |
+| Total Products        | Distinct products purchased |
+| Lifespan (Months)     | Active customer duration    |
+| Average Order Value   | Revenue per order           |
+| Average Monthly Spend | Monthly customer spending   |
+| Recency               | Months since last purchase  |
+
+### Customer Segments
+
+| Segment | Criteria                        |
+| ------- | ------------------------------- |
+| VIP     | High-value customers            |
+| Regular | Consistent purchasing customers |
+| New     | Recently acquired customers     |
+
+---
+
+## 📦 Product Report (`gold.report_products`)
+
+### Purpose
+
+Analyzes product performance, customer demand, and revenue generation.
+
+### Metrics
+
+| Metric                  | Description                   |
+| ----------------------- | ----------------------------- |
+| Total Orders            | Orders containing the product |
+| Total Sales             | Product revenue               |
+| Total Quantity Sold     | Units sold                    |
+| Total Customers         | Unique purchasing customers   |
+| Product Lifespan        | Active selling period         |
+| Average Order Revenue   | Revenue per order             |
+| Average Monthly Revenue | Revenue generated per month   |
+| Recency                 | Months since last sale        |
+
+### Product Segments
+
+| Segment        | Criteria                        |
+| -------------- | ------------------------------- |
+| High Performer | Top revenue-generating products |
+| Mid-Range      | Moderate performance products   |
+| Low Performer  | Underperforming products        |
+
+---
+
+## 💰 Sales Report (`gold.report_sales`)
+
+### Purpose
+
+Tracks overall business performance and sales trends.
+
+### Metrics
+
+| Metric              | Description                  |
+| ------------------- | ---------------------------- |
+| Total Revenue       | Gross sales revenue          |
+| Total Orders        | Number of transactions       |
+| Total Customers     | Active customers             |
+| Average Order Value | Revenue per order            |
+| Monthly Revenue     | Revenue by month             |
+| Revenue Growth %    | Period-over-period growth    |
+| Sales Trend         | Historical sales performance |
+
+### Business Questions
+
+* How is revenue trending over time?
+* Which periods generate the highest sales?
+* What is the overall growth rate?
+
+---
+
+## 🌎 Geography Report (`gold.report_geography`)
+
+### Purpose
+
+Analyzes sales performance across countries, regions, and cities.
+
+### Metrics
+
+| Metric                       | Description             |
+| ---------------------------- | ----------------------- |
+| Total Revenue                | Revenue by geography    |
+| Total Customers              | Customers per region    |
+| Total Orders                 | Orders by location      |
+| Average Revenue per Customer | Regional customer value |
+
+### Business Questions
+
+* Which regions generate the most revenue?
+* Where are the highest-value customers located?
+* Which markets show growth opportunities?
+
+---
+
+## 📈 Monthly Performance Report (`gold.report_monthly_performance`)
+
+### Purpose
+
+Provides executive-level KPI tracking and trend analysis.
+
+### Metrics
+
+| KPI                 | Description             |
+| ------------------- | ----------------------- |
+| Revenue             | Monthly revenue         |
+| Orders              | Monthly order volume    |
+| Customers           | Active customers        |
+| Products Sold       | Total products sold     |
+| Average Order Value | Monthly AOV             |
+| Growth Rate         | Month-over-month growth |
+
+---
+
+## 🔄 Customer Retention Report (`gold.report_retention`)
+
+### Purpose
+
+Measures customer loyalty and repeat purchase behavior.
+
+### Metrics
+
+| Metric               | Description                   |
+| -------------------- | ----------------------------- |
+| Repeat Customers     | Returning customers           |
+| Retention Rate       | Customer retention percentage |
+| Churn Rate           | Lost customers percentage     |
+| Repeat Purchase Rate | Multiple-order customers      |
+
+---
+
+## 🏆 Executive Dashboard KPIs
+
+The reporting layer supports executive dashboards with the following KPIs:
+
+| KPI                     | Description                |
+| ----------------------- | -------------------------- |
+| Total Revenue           | Overall sales revenue      |
+| Total Customers         | Customer count             |
+| Total Products Sold     | Units sold                 |
+| Average Order Value     | Revenue per order          |
+| Customer Lifetime Value | Average customer value     |
+| Retention Rate          | Customer loyalty metric    |
+| Revenue Growth %        | Business growth indicator  |
+| Top Product             | Highest-performing product |
+| Top Customer            | Highest-value customer     |
+
+---
+
+## 🎯 Business Value
+
+The Gold Layer serves as the enterprise reporting foundation by providing:
+
+* Single Source of Truth
+* Customer 360 Analytics
+* Product Performance Monitoring
+* Sales Trend Analysis
+* Executive KPI Reporting
+* Revenue Optimization Insights
+* Customer Retention Tracking
+* Data-Driven Decision Making
+
+
 
 ## 📂 Repository Structure
 ```
@@ -65,6 +263,7 @@ data-warehouse-project/
 │   ├── data_models.drawio              # Draw.io file for data models (star schema)
 │   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
 │
+│
 ├── scripts/                            # SQL scripts for ETL and transformations
 │   ├── bronze/                         # Scripts for extracting and loading raw data
 │   ├── silver/                         # Scripts for cleaning and transforming data
@@ -78,3 +277,5 @@ data-warehouse-project/
 └── requirements.txt                    # Dependencies and requirements for the project
 ```
 ---
+
+
