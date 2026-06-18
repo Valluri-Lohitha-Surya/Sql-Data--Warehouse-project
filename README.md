@@ -263,6 +263,21 @@ data-warehouse-project/
 │   ├── data_models.drawio              # Draw.io file for data models (star schema)
 │   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
 │
+├──project-report/
+    ├── 00_init_database.sql                  # Database creation and initialization
+    ├── 01_database_exploration.sql           # Database structure exploration
+    ├── 02_dimensions_exploration.sql         # Dimension table analysis
+    ├── 03_data_range_exploration.sql         # Data range and coverage analysis
+    ├── 04_measures_exploration.sql           # Business measures exploration
+    ├── 05_magnitude_analysis.sql             # Magnitude and volume analysis
+    ├── 06_ranking_analysis.sql               # Ranking analysis using SQL window functions
+    ├── 07_change_over_time_analysis.sql      # Trend analysis over time
+    ├── 08_cummulative_analysis.sql           # Running totals and cumulative metrics
+    ├── 09_performance_analysis.sql           # KPI and performance analysis
+    ├── 10_data_segmentation.sql              # Customer/Product segmentation
+    ├── 11_part_to_whole_analysis.sql         # Contribution percentage analysis
+    ├── 12_report_customers.sql               # Customer report generation
+    ├── 13_report_products.sql                # Product report generation
 │
 ├── scripts/                            # SQL scripts for ETL and transformations
 │   ├── bronze/                         # Scripts for extracting and loading raw data
